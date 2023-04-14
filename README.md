@@ -1,6 +1,6 @@
 # Most starred on GitHub :star:
 
-This Python script retrieves and displays the top 10 most starred repositories on GitHub in the last week. It uses the GitHub REST API to fetch the repositories and the `colorama` library to add color, icons, and emojis to the output in the terminal.
+This Python script retrieves and displays the top 10 most starred repositories on GitHub in the last specified number of days. It uses the GitHub REST API to fetch the repositories and the `colorama` library to add color, icons, and emojis to the output in the terminal.
 
 ## Prerequisites
 
@@ -17,10 +17,12 @@ The requirements.txt file contains the `colorama` library which is used for addi
 - Run the script using the following command:
 
 ```python
-python main.py
+python main.py [days]
 ```
 
-The script will fetch the top 10 most starred repositories on GitHub in the last week and display them in the terminal with color, icons, and emojis to make the output visually appealing.
+Replace [days] with the number of days you want to retrieve repositories from. If you don't provide any argument, it will use 7 as the default value.  
+
+The script will fetch the top 10 most starred repositories on GitHub in the last specified number of days and display them in the terminal with color, icons, and emojis to make the output visually appealing.
 
 ## License
 
