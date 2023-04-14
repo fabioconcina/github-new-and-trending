@@ -1,4 +1,4 @@
-# Most starred on GitHub
+# Most starred on GitHub :star:
 
 This Python script retrieves and displays the top 10 most starred repositories on GitHub in the last week. It uses the GitHub REST API to fetch the repositories and the `colorama` library to add color, icons, and emojis to the output in the terminal.
 
