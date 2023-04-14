@@ -40,6 +40,7 @@ if response.status_code == 200:
         "Go": "🔍",
         "C++": "⚙️",
         "C#": "🔢",
+        "C": "🔢",
         "TypeScript": "📜",
         "Shell": "💻",
         "CSS": "🎨",
