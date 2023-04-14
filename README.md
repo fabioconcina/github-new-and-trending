@@ -16,7 +16,9 @@ The requirements.txt file contains the `colorama` library which is used for addi
 - Open a terminal and navigate to the directory where main.py is located.
 - Run the script using the following command:
 
-```python main.py```
+```python
+python main.py
+```
 
 The script will fetch the top 10 most starred repositories on GitHub in the last week and display them in the terminal with color, icons, and emojis to make the output visually appealing.
 
