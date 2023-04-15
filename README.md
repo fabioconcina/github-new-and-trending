@@ -17,12 +17,13 @@ The requirements.txt file contains the `colorama` library which is used for addi
 - Run the script using the following command:
 
 ```python
-python main.py [days]
+python main.py -d [days] -l [language]
 ```
 
-Replace [days] with the number of days you want to retrieve repositories from. If you don't provide any argument, it will use 7 as the default value.  
+Replace [days] with the number of days you want to retrieve repositories from. If you don't provide any argument for days, it will use 7 as the default value.
+Replace [language] with the language you want to filter the repositories by. If you don't provide any argument for language, it will fetch repositories without any language filter.
 
-The script will fetch the top 10 most starred repositories on GitHub in the last specified number of days and display them in the terminal with color, icons, and emojis to make the output visually appealing.
+The script will fetch the top 10 most starred repositories on GitHub in the last specified number of days and with the specified language filter, if provided, and display them in the terminal with color, icons, and emojis to make the output visually appealing.
 
 ## License
 

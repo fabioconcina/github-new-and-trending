@@ -5,11 +5,13 @@ import argparse
 
 # Set up command-line argument parser
 parser = argparse.ArgumentParser(description="Fetch most starred repositories from GitHub API")
-parser.add_argument("days", type=int, nargs="?", default=7, help="Number of days to retrieve repositories from (default: 7)")
+parser.add_argument("-d", "--days", type=int, nargs="?", default=7, help="Number of days to retrieve repositories from (default: 7)")
+parser.add_argument("-l", "--language", type=str, nargs="?", default=None, help="Filter repositories by language (default: None)")
 args = parser.parse_args()
 
 # Get the number of days from command-line arguments
 days = args.days
+language = args.language
 
 # Set the base URL for GitHub REST API
 base_url = "https://api.github.com"
@@ -18,7 +20,10 @@ base_url = "https://api.github.com"
 date_from = (datetime.now() - timedelta(days=days)).isoformat()
 
 # Construct the endpoint URL for retrieving most starred repos
-endpoint = f"{base_url}/search/repositories?q=created:>{date_from}&sort=stars&order=desc"
+endpoint = f"{base_url}/search/repositories?q=created:>{date_from}"
+if language:
+    endpoint += f"+language:{language}"
+endpoint += "&sort=stars&order=desc"
 
 # Send GET request to GitHub API
 response = requests.get(endpoint)
