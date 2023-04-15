@@ -84,7 +84,7 @@ if response.status_code == 200:
         for i, repo in enumerate(most_starred_repos, start=1):
             description = repo['description'] if repo['description'] is not None else "Not specified"
             language = repo['language'] if repo['language'] is not None else "Not specified"
-            print(f"{Fore.CYAN}Repository {i}:{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}#{i}{Style.RESET_ALL}")
             print(f"{Fore.GREEN}Repository Name:{Style.RESET_ALL} {repo['name']}")
             print(f"{Fore.GREEN}Repository Owner:{Style.RESET_ALL} {repo['owner']['login']}")
             print(f"{Fore.GREEN}Number of Stars:{Style.RESET_ALL} {repo['stargazers_count']}")
