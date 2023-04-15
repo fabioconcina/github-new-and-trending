@@ -70,11 +70,14 @@ if response.status_code == 200:
     # Display the details of the top 10 most starred repositories with color, icons, and emojis
     print(f"{Fore.YELLOW}Top 10 Most Starred Repositories in the Last {days} Days:{Style.RESET_ALL}\n")
     for i, repo in enumerate(most_starred_repos, start=1):
+        description = repo['description'] if repo['description'] is not None else "Not specified"
+        language = repo['language'] if repo['language'] is not None else "Not specified"
         print(f"{Fore.CYAN}Repository {i}:{Style.RESET_ALL}")
         print(f"{Fore.GREEN}Repository Name:{Style.RESET_ALL} {repo['name']}")
         print(f"{Fore.GREEN}Repository Owner:{Style.RESET_ALL} {repo['owner']['login']}")
         print(f"{Fore.GREEN}Number of Stars:{Style.RESET_ALL} {repo['stargazers_count']}")
+        print(f"{Fore.GREEN}Description:{Style.RESET_ALL} {description}")
         print(f"{Fore.BLUE}Repository URL:{Style.RESET_ALL} {repo['html_url']}")
-        print(f"{Fore.MAGENTA}Language:{Style.RESET_ALL} {icons.get(repo['language'], 'Unknown')} {repo['language']}\n")
+        print(f"{Fore.MAGENTA}Language:{Style.RESET_ALL} {icons.get(language, '')} {language}\n")
 else:
     print("Failed to fetch most starred repositories. Response code:", response.status_code)
