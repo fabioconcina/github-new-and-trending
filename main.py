@@ -1,7 +1,9 @@
-import requests
-from datetime import datetime, timedelta
-from colorama import Fore, Style
 import argparse
+from datetime import datetime, timedelta
+
+import requests
+from colorama import Fore, Style
+
 
 # Set up command-line argument parser
 parser = argparse.ArgumentParser(description="Fetch most starred repositories from GitHub API")
