@@ -87,9 +87,10 @@ if response.status_code == 200:
             print(f"{Fore.CYAN}#{i}{Style.RESET_ALL}")
             print(f"{Fore.GREEN}Repository Name:{Style.RESET_ALL} {repo['name']}")
             print(f"{Fore.GREEN}Repository Owner:{Style.RESET_ALL} {repo['owner']['login']}")
-            print(f"{Fore.GREEN}Number of Stars:{Style.RESET_ALL} {repo['stargazers_count']}")
             print(f"{Fore.GREEN}Description:{Style.RESET_ALL} {description}")
+            print(f"{Fore.YELLOW}Number of Stars:{Style.RESET_ALL} {repo['stargazers_count']}")
             print(f"{Fore.BLUE}Repository URL:{Style.RESET_ALL} {repo['html_url']}")
+            print(f"{Fore.BLUE}Creation Date:{Style.RESET_ALL} {repo['created_at']}")
             print(f"{Fore.MAGENTA}Language:{Style.RESET_ALL} {icons.get(language, '')} {language}\n")
 else:
     print("Failed to fetch most starred repositories. Response code:", response.status_code)
