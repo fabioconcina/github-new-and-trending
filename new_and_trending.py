@@ -2,8 +2,10 @@ import argparse
 from datetime import datetime, timedelta
 
 import requests
-from colorama import Fore, Style
+from colorama import just_fix_windows_console, Fore, Style
 
+
+just_fix_windows_console()
 
 # Set up command-line argument parser
 parser = argparse.ArgumentParser(description="Fetch most starred repositories from GitHub API")
