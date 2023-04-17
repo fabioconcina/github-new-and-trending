@@ -81,8 +81,7 @@ if response.status_code == 200:
             "Clojure": "🚿"
         }
 
-        # Display the details of the top 10 most starred repositories with color, icons, and emojis
-        print(f"{Fore.YELLOW}Top 10 Most Starred Repositories in the Last {days} Days:{Style.RESET_ALL}\n")
+        print(f"\n{Fore.YELLOW}Top 10 New and Trending Repositories in the Last {days} Days:{Style.RESET_ALL}\n")
         for i, repo in enumerate(most_starred_repos, start=1):
             description = repo['description'] if repo['description'] is not None else "Not specified"
             language = repo['language'] if repo['language'] is not None else "Not specified"
@@ -95,4 +94,4 @@ if response.status_code == 200:
             print(f"{Fore.BLUE}Creation Date:{Style.RESET_ALL} {repo['created_at']}")
             print(f"{Fore.MAGENTA}Language:{Style.RESET_ALL} {icons.get(language, '')} {language}\n")
 else:
-    print("Failed to fetch most starred repositories. Response code:", response.status_code)
+    print("Failed to fetch new and trending repositories. Response code:", response.status_code)
