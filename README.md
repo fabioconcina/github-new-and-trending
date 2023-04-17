@@ -12,12 +12,12 @@ The requirements.txt file contains the `colorama` library which is used for addi
 
 ## How to Use
 
-- Clone the repository or download the main.py file to your local machine.
-- Open a terminal and navigate to the directory where main.py is located.
+- Clone the repository.
+- Open a terminal and navigate to the directory where the script is located.
 - Run the script using the following command:
 
 ```python
-python main.py -d [days] -l [language]
+python new_and_trending.py -d [days] -l [language]
 ```
 
 Replace [days] with the number of days you want to retrieve repositories from. If you don't provide any argument for days, it will use 7 as the default value.
